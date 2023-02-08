@@ -20,5 +20,6 @@ export const myErrorHandler = (
   error: Error,
   info: { componentStack: string }
 ) => {
-  console.error(error);
+  console.log(error.message);
+  throw error;
 };

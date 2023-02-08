@@ -1,6 +1,5 @@
 import axios from "axios";
 import { AsteroidDataModel } from "../models/asteroidDataModel";
-import { myErrorHandler } from "../components/ErrorBoundary";
 import { store } from "../state";
 import { AsteroidDataActionTypes } from "../state/action-types";
 
@@ -22,7 +21,6 @@ export const AsteroidApiFunc = async (term: number) => {
     })
     .catch((err) => {
       const error = new Error(err);
-      myErrorHandler(error, { componentStack: error.message });
       throw error;
     });
   return { processedData };
@@ -48,7 +46,6 @@ export const randomAsteroidApiFunc = async () => {
     })
     .catch((err) => {
       const error = new Error(err);
-      myErrorHandler(error, { componentStack: error.message });
       throw error;
     });
   store.dispatch({

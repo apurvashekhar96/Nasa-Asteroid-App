@@ -13,7 +13,12 @@ export const handlers = [
       );
     }
   ),
-
+  rest.get(
+    "https://api.nasa.gov/neo/rest/v1/neo/404?api_key=6bVQ55OWVc5hz1j32JZozPYxcJI9vmkVOP2Gr5Mb",
+    (req, res, ctx) => {
+      return res(ctx.status(404), ctx.json({ message: "mdeuperror" }));
+    }
+  ),
   rest.get(
     "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=6bVQ55OWVc5hz1j32JZozPYxcJI9vmkVOP2Gr5Mb",
     (req, res, ctx) => {

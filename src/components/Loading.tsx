@@ -10,7 +10,7 @@ export const Loading = ({ children, isLoading }: LoadingProps) => {
   return (
     <>
       {isLoading ? (
-        <div className="loading">
+        <div data-testid="loader" className="loading">
           <div className="center">
             <div className="wave"></div>
             <div className="wave"></div>

@@ -7,14 +7,16 @@ const AsteroidPage = (props: any) => {
   const clickHnadler = () => {
     props.closeWindow();
   };
-  console.log(`Asteroid came`);
   return (
     <>
       <div className="asteroidContainer">
         <div onClick={clickHnadler} className="close Window">
           <AiOutlineCloseCircle className="closeImage" />
         </div>
-        <div className="asteroidName">{`Name of the Asteroid: ${data.name}`}</div>
+        <div
+          data-testid="asteroidpage"
+          className="asteroidName"
+        >{`Name of the Asteroid: ${data.name}`}</div>
         <div className="asteroidLink">
           <a href={data.nasa_jpl_url}>{`JPL URL: ${data.nasa_jpl_url}`}</a>
         </div>

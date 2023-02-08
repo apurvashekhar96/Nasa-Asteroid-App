@@ -4,9 +4,12 @@ import { useState, useEffect } from "react";
 import { useTypedSelector } from "../hooks/usetypedSelector";
 import { myErrorHandler } from "./ErrorBoundary";
 import Loading from "./Loading";
+import { useErrorHandler } from "react-error-boundary";
+
 const MainContent = () => {
   const [homeIsOpen, setHomeIsOpen] = useState<boolean>(true);
   const [extraLoader, setLoading] = useState<boolean>(false);
+  const handleError = useErrorHandler();
   const { data, loading, error } = useTypedSelector(
     (state) => state.asteroidData
   );
@@ -24,7 +27,7 @@ const MainContent = () => {
 
   if (error) {
     const err = new Error(error);
-    myErrorHandler(err, { componentStack: err.message });
+    handleError(err);
     throw err;
   }
   return (

@@ -18,7 +18,6 @@ const HomePage = (props: any) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(Number(e.target.value));
   };
-  console.log(inputValue);
 
   return (
     <>
