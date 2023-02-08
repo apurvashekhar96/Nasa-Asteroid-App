@@ -1,0 +1,61 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.searchRandomBtn {
+}
+
+.formEl {
+  transform: translateY(16.5rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchByIdSection {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.searchByIdSection > input {
+  margin-bottom: 1rem;
+  height: 1.5rem;
+  width: 13rem;
+}
+.btn {
+  background-color: bisque;
+  height: 1.5rem;
+  width: 10rem;
+  text-align: center;
+
+  border-radius: 10rem;
+  transition: transform 0.1s linear;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.searchByIdBtn {
+}
+
+header {
+  text-align: center;
+  font-size: 350%;
+  font-weight: bolder;
+  color: darkslategray;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 2rem;
+  transform: translateY(-1rem);
+}
